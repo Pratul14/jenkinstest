@@ -1,7 +1,4 @@
-FROM centos:latest
-MAINTAINER pratulpruthi@gmail.com
-RUN sudo yum install -y httpd
-RUN echo "hello"
-RUN vim abc.txt
-CMD ["usr/sbin/httpd", "-D", "FOREGROUND"]
+FROM scratch
+ADD hello /
+CMD ["/hello"]
 EXPOSE 80
